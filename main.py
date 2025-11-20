@@ -4,11 +4,11 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler
 
 
-TOKEN = os.getenv("BOT_TOKEN")
-print("TOKEN LOADED:", TOKEN)
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+print("TOKEN LOADED:", BOT_TOKEN)
 
 app = FastAPI()
-bot_app = Application.builder().token(TOKEN).build()
+bot_app = Application.builder().token(BOT_TOKEN).build()
 
 
 #Telegram Commands
