@@ -3,7 +3,10 @@ from fastapi import FastAPI, Request
 from telegram import Update
 from telegram.ext import Application, CommandHandler
 
-TOKEN = ""
+
+TOKEN = os.getenv("BOT_TOKEN")
+print("TOKEN LOADED:", TOKEN)
+
 app = FastAPI()
 bot_app = Application.builder().token(TOKEN).build()
 
